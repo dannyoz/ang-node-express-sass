@@ -1,0 +1,51 @@
+// Import all the sass partials for compilation
+
+// 1. PRE-DEFINED VARIABLES AND MIXINS
+// =====================================================
+@import
+	"compass/css3",
+	
+
+	// 1.1 Compass CSS3 support for vendor prefixng
+	// --------------------------------------------
+	"compass/css3",
+	
+	// 1.2 Common variables
+	// --------------------------------------------
+	"global/sass/variables/colours",
+	"global/sass/variables/dark-theme",  
+	"global/sass/variables/default_settings",
+
+	// 1.3 Mixins and helpers
+	// --------------------------------------------
+	"global/sass/mixins/animations",
+	"global/sass/mixins/grid",
+	"global/sass/mixins/font-face",
+	"global/sass/mixins/forms",
+	"global/sass/mixins/helpers",
+	"global/sass/mixins/layout",
+	"global/sass/mixins/theme",
+	"global/sass/mixins/typography",
+	"global/sass/mixins/core",
+
+// 2. CSS OUTPUTTERS
+// =====================================================
+
+	// 2.1 Core styling
+	// --------------------------------------------
+	"global/sass/core",
+	"global/sass/links",
+	"global/sass/panels",
+	"global/sass/forms",
+	"global/sass/typography",
+	"global/sass/dark-theme-fonts",
+
+	// 2.2 Global module styling
+	// --------------------------------------------
+	"global/nav/nav";
+	
+	// 2.* Misc
+	// --------------------------------------------
+	"global/sass/animations";
+
+// =====================================================
