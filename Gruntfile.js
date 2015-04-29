@@ -94,6 +94,13 @@ module.exports = function(grunt) {
                 tasks: ['ngtemplates']
             },
 
+            json: {
+                files:[
+                    'app/**/*.json'
+                ],
+                tasks: ['copy:json']
+            },
+
             livereload: {
                 options: { livereload: 1339 },
                 files: [
@@ -120,19 +127,6 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            html: {
-                expand: true, 
-                flatten: true,
-                cwd: 'app', 
-                src: [
-                    '**.html',
-                    '*/*.html',
-                    '*/*/*.html',
-                    '*/*/*/*.html'
-                    ], 
-                dest: 'build/views/', 
-                filter: 'isFile'
-            },
             json : {
                 expand: true, 
                 flatten: true,
@@ -173,6 +167,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-angular-templates');
 
     // RUN GRUNT 
-    grunt.registerTask('default', ['concat', 'ngtemplates', 'express:dev', 'uglify', 'watch', 'compass']);
+    grunt.registerTask('default', ['concat', 'ngtemplates', 'express:dev', 'uglify', 'watch', 'compass', 'copy:json']);
 
 };
