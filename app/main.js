@@ -22548,7 +22548,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
  	$routeProvider
 
         .when('/', {
-        	templateUrl: 'app/views/home/home.html'
+        	templateUrl: 'app/views/home/home.html',
+            controller : 'home'
         })
 
         .when('/styleguide', {
@@ -22671,5 +22672,20 @@ app.controller('nav', ['$scope', '$http', 'global', function ($scope, $http, glo
     $scope.$watch(function(){
         $scope.isLoading = global.isLoading
     })
+
+}]);
+
+app.factory('api', ['$http', function ($http){
+	return{
+		getContent : function(file){
+			return $http.get('/api/'+file+'.json');
+		}
+	}
+}]);
+app.controller('home',['$scope', 'api', function ($scope, api){
+	
+	api.getContent('data').success(function (data){
+		console.log(data);
+	});
 
 }]);

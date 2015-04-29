@@ -6,7 +6,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
  	$routeProvider
 
         .when('/', {
-        	templateUrl: 'app/views/home/home.html'
+        	templateUrl: 'app/views/home/home.html',
+            controller : 'home'
         })
 
         .when('/styleguide', {
