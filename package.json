@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "grunt-contrib-copy": "^0.7.0",
-    "grunt-express-server": "~0.4.13"
+    "grunt-express-server": "~0.4.13",
+    "spice-sass": "^1.0.0"
   }
 }
